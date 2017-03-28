@@ -17,7 +17,7 @@ object HorizontalBoxBlurRunner {
   def main(args: Array[String]): Unit = {
     val radius = 3
     val width = 32
-    val height = 32
+    val height = 64
     val src = new Img(width, height)
     val dst = new Img(width, height)
     val seqtime = standardConfig measure {
@@ -80,7 +80,7 @@ object HorizontalBoxBlur {
 
       val strip = task {
         blur(src, dst, from, to, radius)
-      }.fork()
+      }
       tasks += strip
     }
 

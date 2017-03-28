@@ -81,7 +81,7 @@ object VerticalBoxBlur {
 
       val strip = task {
         blur(src, dst, from, to, radius)
-      }.fork()
+      }
       tasks += strip
     }
 
